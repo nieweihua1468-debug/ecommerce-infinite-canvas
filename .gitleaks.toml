@@ -1,0 +1,7 @@
+[extend]
+useDefault = true
+
+# These are runtime directories, never part of a source release.
+[[allowlists]]
+description = "Ignored local dependencies and build/runtime outputs"
+paths = ['''(^|/)node_modules/''', '''(^|/)dist/''', '''(^|/)data/''', '''(^|/)\.env\.local$''']

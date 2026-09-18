@@ -1,0 +1,34 @@
+node_modules/
+dist/
+
+# Local credentials and machine-specific provider configuration.
+.env*
+!.env.example
+
+# Runtime business data, imported media, tasks, users, and generated assets.
+# The server recreates this directory and production deployments preserve it
+# separately from application source.
+data/
+
+# Local browser/test output and working files.
+.playwright-cli/
+output/
+work/
+/=
+
+.DS_Store
+*.log
+npm-debug.log*
+
+
+# Private backups, test evidence, and credential files.
+backups/
+private/
+source-private/
+release-prep/
+playwright-report/
+test-results/
+*.pem
+*.key
+*.p12
+*.pfx

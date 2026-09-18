@@ -1,0 +1,51 @@
+{
+  "name": "ecommerce-infinite-canvas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19 <25",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "node --watch server/index.js",
+    "dev:web": "vite --host 127.0.0.1",
+    "prebuild": "node scripts/generate-template-thumbnails.mjs && node scripts/generate-hot-rank-posters.mjs --if-media-root-present",
+    "build": "vite build",
+    "start": "NODE_ENV=production npm run preflight && NODE_ENV=production node server/index.js",
+    "test": "node --test server/*.test.js src/*.test.js",
+    "check": "npm test && npm run build",
+    "import:video-inspirations": "node scripts/import-video-inspirations.mjs && npm run generate:inspiration-thumbnails",
+    "generate:inspiration-thumbnails": "node scripts/generate-inspiration-thumbnails.mjs",
+    "generate:template-thumbnails": "node scripts/generate-template-thumbnails.mjs",
+    "generate:hot-rank-posters": "node scripts/generate-hot-rank-posters.mjs",
+    "generate:hot-rank-previews": "node scripts/generate-hot-rank-previews.mjs",
+    "preflight": "node deploy/preflight.mjs",
+    "providers:check": "node deploy/provider-readiness.mjs",
+    "api:check": "node deploy/api-connectivity.mjs",
+    "readiness:offline": "node deploy/offline-readiness.mjs",
+    "smoke:launch": "node deploy/launch-smoke.mjs --expect-production",
+    "smoke:launch:local": "node deploy/launch-smoke.mjs",
+    "migrate:digital-assets": "node deploy/migrate-digital-assets.mjs",
+    "maintenance:dry-run": "./deploy/cleanup-server.sh --dry-run --scope transient",
+    "setup": "node scripts/setup-local.mjs"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffprobe-installer/ffprobe": "^2.1.2",
+    "@xyflow/react": "^12.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^9.2.4",
+    "vite": "^7.1.12"
+  },
+  "description": "Commerce Canvas — 电商无限画布与 AI 内容工作流"
+}

@@ -1,0 +1,133 @@
+/* Admin-only final cascade layer. Kept entry-specific for production parity. */
+:root {
+  --surface-page: #040806;
+  --surface-item: #080d09;
+  --surface-item-hover: #0b120d;
+  --surface-divider: rgba(231, 242, 233, 0.13);
+  --surface-divider-strong: rgba(217, 255, 67, 0.28);
+}
+
+.admin-shell,
+.admin-main,
+.admin-content {
+  background: var(--surface-page);
+  background-image: none;
+}
+
+.admin-sidebar {
+  border-right: 1px solid var(--surface-divider);
+  background: var(--surface-page);
+  box-shadow: none;
+}
+
+.admin-topbar {
+  border-color: var(--surface-divider);
+  background: rgba(4, 8, 6, 0.94);
+  box-shadow: none;
+}
+
+.admin-content {
+  min-height: calc(100vh - 56px);
+  padding: 16px clamp(16px, 2vw, 28px) 28px;
+}
+
+.admin-page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.admin-page-title {
+  min-height: 0;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.admin-page-title h1 {
+  margin-top: 0;
+  font-size: 21px;
+}
+
+:is(
+  .metrics-grid,
+  .points-summary,
+  .daily-generation-grid,
+  .generation-time-grid,
+  .dashboard-grid,
+  .template-board-detail-grid,
+  .template-admin-grid
+) {
+  gap: 8px;
+}
+
+.metric-card {
+  min-height: 104px;
+  padding: 13px 14px;
+  border: 1px solid var(--surface-divider);
+  border-radius: 9px;
+  background: var(--surface-item);
+  box-shadow: none;
+}
+
+.admin-card,
+.template-board-panel,
+.data-table-card {
+  border: 1px solid var(--surface-divider);
+  border-radius: 10px;
+  background: var(--surface-item);
+  box-shadow: none;
+}
+
+.template-board-panel {
+  min-height: 0;
+  padding: 14px;
+}
+
+.card-head,
+.table-toolbar {
+  padding-inline: 14px;
+}
+
+.template-scope-filters {
+  padding: 4px;
+  border: 1px solid var(--surface-divider);
+  border-radius: 9px;
+  background: var(--surface-item);
+}
+
+.template-scope-filters button:hover:not(.active) {
+  background: transparent;
+  color: var(--text-2);
+}
+
+.admin-template-card,
+.user-task-card {
+  border: 1px solid var(--surface-divider);
+  border-radius: 8px;
+  background: var(--surface-item);
+  box-shadow: none;
+}
+
+.admin-template-card:hover,
+.user-task-card:hover {
+  border-color: var(--surface-divider-strong);
+  background: var(--surface-item-hover);
+  box-shadow: none;
+}
+
+.template-admin-actions {
+  border-color: var(--surface-divider);
+}
+
+.admin-refresh:hover:not(:disabled) {
+  background: transparent;
+  color: var(--text-1);
+  box-shadow: none;
+}
+
+@media (max-width: 640px) {
+  .admin-content {
+    padding: 12px 10px 24px;
+  }
+}
+

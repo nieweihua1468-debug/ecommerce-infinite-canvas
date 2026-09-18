@@ -1,0 +1,345 @@
+.mcp-access-panel {
+  display: grid;
+  gap: 14px;
+  color: #eef4e9;
+}
+
+.mcp-access-loading,
+.mcp-access-error {
+  min-height: 220px;
+  display: grid;
+  place-content: center;
+  gap: 10px;
+  text-align: center;
+  color: #9ba89a;
+}
+
+.mcp-access-error strong { color: #f0f4ec; }
+
+.mcp-access-hero,
+.mcp-card,
+.mcp-secret-card {
+  border: 1px solid rgba(190, 211, 183, 0.13);
+  background: rgba(9, 14, 10, 0.9);
+  border-radius: 14px;
+}
+
+.mcp-access-hero {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 18px;
+  background:
+    radial-gradient(circle at 0 0, rgba(205, 255, 83, 0.1), transparent 38%),
+    rgba(8, 14, 9, 0.94);
+}
+
+.mcp-access-hero-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: #d8ff58;
+  background: rgba(200, 255, 79, 0.1);
+  border: 1px solid rgba(200, 255, 79, 0.22);
+  border-radius: 12px;
+}
+
+.mcp-access-hero h3 {
+  margin: 3px 0 4px;
+  font-size: 17px;
+  color: #f3f7ef;
+}
+
+.mcp-access-hero p,
+.mcp-access-hero .eyebrow { margin: 0; color: #879486; }
+.mcp-access-hero .eyebrow { font-size: 9px; letter-spacing: 0.16em; color: #b8dd52; }
+
+.mcp-access-status { text-align: right; }
+.mcp-access-status span,
+.mcp-access-status small { display: block; }
+.mcp-access-status span { color: #dce8d7; font-size: 12px; }
+.mcp-access-status span i {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #cfff4d;
+  box-shadow: 0 0 10px rgba(207, 255, 77, 0.7);
+}
+.mcp-access-status small { margin-top: 5px; color: #687668; font-size: 10px; }
+
+.mcp-access-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.85fr) minmax(420px, 1.15fr);
+  gap: 14px;
+}
+
+.mcp-card { padding: 15px; }
+.mcp-card > header,
+.mcp-secret-card > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 13px;
+}
+.mcp-card > header strong,
+.mcp-card > header small,
+.mcp-secret-card > header strong,
+.mcp-secret-card > header small { display: block; }
+.mcp-card > header strong,
+.mcp-secret-card > header strong { color: #edf3e9; font-size: 13px; }
+.mcp-card > header small,
+.mcp-secret-card > header small { margin-top: 3px; color: #707e70; font-size: 10px; }
+.mcp-card > header > svg { color: #a7bf63; }
+
+.mcp-codex-quickstart {
+  border-color: rgba(207, 255, 77, 0.2);
+  background:
+    linear-gradient(135deg, rgba(207, 255, 77, 0.045), transparent 45%),
+    rgba(9, 14, 10, 0.92);
+}
+
+.mcp-codex-workbench {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(440px, 1.1fr);
+  gap: 14px;
+}
+
+.mcp-intent-editor {
+  display: grid;
+  gap: 8px;
+}
+
+.mcp-intent-editor > label {
+  color: #aab7a6;
+  font-size: 10px;
+}
+
+.mcp-intent-editor textarea {
+  width: 100%;
+  min-height: 116px;
+  padding: 11px 12px;
+  resize: vertical;
+  border: 1px solid rgba(190, 211, 183, 0.14);
+  border-radius: 9px;
+  outline: none;
+  background: #060a07;
+  color: #e7eee3;
+  font: inherit;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.mcp-intent-editor textarea:focus {
+  border-color: rgba(207, 255, 77, 0.45);
+  box-shadow: 0 0 0 3px rgba(207, 255, 77, 0.06);
+}
+
+.mcp-intent-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mcp-intent-presets button {
+  min-height: 26px;
+  padding: 0 9px;
+  border: 1px solid rgba(190, 211, 183, 0.11);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+  color: #8f9d8c;
+  cursor: pointer;
+  font-size: 9px;
+}
+
+.mcp-intent-presets button:hover {
+  border-color: rgba(207, 255, 77, 0.28);
+  color: #d9ff66;
+}
+
+.mcp-quick-actions {
+  display: grid;
+  gap: 7px;
+}
+
+.mcp-quick-actions article {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 7px 8px;
+  border: 1px solid rgba(190, 211, 183, 0.09);
+  border-radius: 9px;
+  background: rgba(3, 7, 4, 0.54);
+}
+
+.mcp-quick-actions article > span {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: rgba(207, 255, 77, 0.08);
+  color: #bddb66;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.mcp-quick-actions article strong,
+.mcp-quick-actions article small { display: block; }
+.mcp-quick-actions article strong { color: #e6ede2; font-size: 11px; }
+.mcp-quick-actions article small { margin-top: 3px; color: #6f7d6f; font-size: 9px; }
+.mcp-quick-actions .secondary-button,
+.mcp-quick-actions .primary-button { min-width: 122px; min-height: 31px; padding-inline: 10px; font-size: 10px; }
+.mcp-quick-actions .mcp-handoff-action { border-color: rgba(207, 255, 77, 0.18); }
+.mcp-connection-success { color: #b9dd63 !important; }
+.mcp-connection-failed { color: #e29696 !important; }
+.mcp-connection-testing { color: #d9c06b !important; }
+
+.mcp-token-form {
+  display: grid;
+  grid-template-columns: 1fr 108px;
+  gap: 10px;
+}
+.mcp-token-form label > span { display: block; margin-bottom: 6px; color: #879486; font-size: 10px; }
+.mcp-token-form input,
+.mcp-token-form select {
+  width: 100%;
+  height: 36px;
+  border: 1px solid rgba(190, 211, 183, 0.13);
+  background: #080d09;
+  color: #e7eee3;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+.mcp-token-form .primary-button { grid-column: 1 / -1; justify-content: center; }
+
+.mcp-endpoint {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 9px 10px;
+  background: #060a07;
+  border-radius: 8px;
+  color: #6f7c70;
+  font-size: 10px;
+}
+.mcp-endpoint code { overflow: hidden; color: #a9b8a5; text-overflow: ellipsis; }
+.mcp-endpoint button,
+.mcp-icon-button {
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #91a18e;
+  cursor: pointer;
+}
+
+.mcp-tool-list { display: flex; flex-wrap: wrap; gap: 7px; max-height: 164px; overflow: auto; }
+.mcp-tool-list > span {
+  display: grid;
+  gap: 2px;
+  min-width: 150px;
+  flex: 1 1 170px;
+  padding: 8px 9px;
+  border: 1px solid rgba(186, 208, 178, 0.1);
+  background: rgba(255, 255, 255, 0.018);
+  border-radius: 8px;
+}
+.mcp-tool-list > span.admin-tool { border-color: rgba(207, 255, 77, 0.2); background: rgba(207, 255, 77, 0.035); }
+.mcp-tool-list code { color: #a9bb9f; font-size: 9px; }
+.mcp-tool-list small { color: #e2e9de; font-size: 10px; }
+
+.mcp-secret-card {
+  padding: 16px;
+  border-color: rgba(207, 255, 77, 0.28);
+  background: linear-gradient(135deg, rgba(207, 255, 77, 0.075), rgba(8, 13, 9, 0.96) 38%);
+}
+.mcp-secret-card > header > span { padding: 4px 7px; border-radius: 999px; background: rgba(207, 255, 77, 0.12); color: #d4ff5f; font-size: 9px; }
+.mcp-secret-value { display: flex; align-items: center; gap: 8px; padding: 10px; background: #050806; border-radius: 9px; }
+.mcp-secret-value code { flex: 1; overflow-wrap: anywhere; color: #d8ff65; font-size: 11px; }
+.mcp-secret-value button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  color: #c7d7c0;
+  cursor: pointer;
+}
+.mcp-codex-command { margin-top: 10px; }
+.mcp-codex-command > span { display: block; margin-bottom: 5px; color: #7f8b7f; font-size: 10px; }
+.mcp-codex-command pre { margin: 0; padding: 11px; overflow: auto; border-radius: 9px; background: #030604; color: #b9cbb2; font-size: 10px; line-height: 1.6; }
+.mcp-secret-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 10px; }
+
+.mcp-token-list,
+.mcp-audit-list { display: grid; gap: 6px; }
+.mcp-token-list article {
+  display: grid;
+  grid-template-columns: 68px minmax(150px, 1fr) minmax(170px, auto) minmax(150px, auto) 70px;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid rgba(186, 208, 178, 0.08);
+  border-radius: 8px;
+}
+.mcp-token-list article.inactive { opacity: 0.55; }
+.mcp-token-state { color: #91a18e; font-size: 10px; }
+.mcp-token-state i { width: 6px; height: 6px; display: inline-block; margin-right: 5px; border-radius: 50%; background: #7d897d; }
+.mcp-token-list article.active .mcp-token-state i { background: #cfff4d; }
+.mcp-token-list strong,
+.mcp-token-list code { display: block; }
+.mcp-token-list strong { color: #e4ebe0; font-size: 11px; }
+.mcp-token-list code { margin-top: 3px; color: #718070; font-size: 9px; }
+.mcp-token-list article > small { color: #687568; font-size: 9px; line-height: 1.55; }
+.mcp-revoke-button { display: inline-flex; align-items: center; justify-content: center; gap: 4px; border: 1px solid rgba(255, 112, 112, 0.18); background: rgba(255, 94, 94, 0.05); color: #d9a1a1; border-radius: 7px; height: 28px; cursor: pointer; }
+
+.mcp-audit-list article {
+  display: grid;
+  grid-template-columns: 48px minmax(180px, 1fr) minmax(150px, auto) 140px;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 9px;
+  background: rgba(255, 255, 255, 0.015);
+  border-radius: 7px;
+}
+.mcp-audit-list article > span { font-size: 9px; }
+.mcp-audit-list article > span.ok { color: #bede63; }
+.mcp-audit-list article > span.failed { color: #e29696; }
+.mcp-audit-list code { color: #b7c6b1; font-size: 9px; }
+.mcp-audit-list small,
+.mcp-audit-list time { color: #687568; font-size: 9px; }
+.mcp-empty { padding: 24px; text-align: center; color: #657164; font-size: 11px; }
+
+.admin-main .mcp-access-panel { max-width: 1280px; margin: 0 auto; }
+.admin-main .mcp-access-panel .primary-button,
+.admin-main .mcp-access-panel .secondary-button { min-height: 34px; }
+
+@media (max-width: 980px) {
+  .mcp-access-grid { grid-template-columns: 1fr; }
+  .mcp-codex-workbench { grid-template-columns: 1fr; }
+  .mcp-token-list article { grid-template-columns: 68px 1fr auto; }
+  .mcp-token-list article > small { display: none; }
+}
+
+@media (max-width: 680px) {
+  .mcp-access-hero { grid-template-columns: auto 1fr; }
+  .mcp-access-status { grid-column: 1 / -1; text-align: left; }
+  .mcp-token-form { grid-template-columns: 1fr; }
+  .mcp-token-form .primary-button { grid-column: auto; }
+  .mcp-secret-actions { flex-direction: column; }
+  .mcp-quick-actions article { grid-template-columns: 30px 1fr; }
+  .mcp-quick-actions article > button { grid-column: 1 / -1; width: 100%; }
+  .mcp-token-list article { grid-template-columns: 60px 1fr auto; }
+  .mcp-audit-list article { grid-template-columns: 42px 1fr; }
+  .mcp-audit-list small,
+  .mcp-audit-list time { display: none; }
+}
+

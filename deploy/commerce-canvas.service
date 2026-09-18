@@ -1,0 +1,35 @@
+[Unit]
+Description=Commerce Canvas Studio production service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=commerce-canvas
+Group=commerce-canvas
+WorkingDirectory=/opt/commerce-canvas
+Environment=NODE_ENV=production
+Environment=NODE_OPTIONS=--max-old-space-size=768
+Environment=APP_INSTANCE_COUNT=1
+Environment=WORKFLOW_GENERATION_CONCURRENCY=6
+Environment=USER_WORKFLOW_CONCURRENCY=6
+Environment=IMAGE_GENERATION_CONCURRENCY=3
+Environment=IMAGE_PROVIDER_CONCURRENCY=3
+UMask=0027
+ExecStartPre=+/usr/bin/install -d -o commerce-canvas -g commerce-canvas -m 0750 /opt/commerce-canvas/data
+ExecStartPre=+/usr/bin/install -d -o commerce-canvas -g commerce-canvas -m 0750 /opt/commerce-canvas/data/generated
+ExecStartPre=/usr/bin/node deploy/preflight.mjs
+ExecStart=/usr/bin/node server/index.js
+Restart=always
+RestartSec=3
+MemoryHigh=1100M
+MemoryMax=1350M
+OOMPolicy=stop
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/opt/commerce-canvas/data
+
+[Install]
+WantedBy=multi-user.target
+
